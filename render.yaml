@@ -1,0 +1,23 @@
+# Roue de la Chance — fichier Blueprint pour Render (New → Blueprint, puis choisissez ce dépôt).
+# Render vous demandera votre numéro de téléphone et votre mot de passe de départ (RDC_ADMIN_PHONE et
+# RDC_ADMIN_PASSWORD) : ils ne sont jamais écrits dans le dépôt.
+services:
+  - type: web
+    name: roue-de-la-chance
+    runtime: docker
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    # Disque permanent : base des tickets et photos (offre payante obligatoire)
+    disk:
+      name: donnees
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: RDC_ADMIN_PHONE
+        sync: false
+      - key: RDC_ADMIN_PASSWORD
+        sync: false
+      - key: RDC_INSTALL_KEY
+        generateValue: true

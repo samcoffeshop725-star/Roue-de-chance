@@ -1,0 +1,328 @@
+{
+  "presets": {
+    "nuit": {
+      "label": "Nuit électrique",
+      "c1": "#FF2E9A",
+      "c2": "#18E7FF",
+      "c3": "#FFD60A",
+      "bg1": "#0E0630",
+      "bg2": "#3B0A6B",
+      "text": "#FFF5FB"
+    },
+    "casino": {
+      "label": "Casino rouge & or",
+      "c1": "#FF3348",
+      "c2": "#FFC21A",
+      "c3": "#FFE07A",
+      "bg1": "#170207",
+      "bg2": "#5E0A18",
+      "text": "#FFF6EC"
+    },
+    "volt": {
+      "label": "Bleu électrique",
+      "c1": "#00E1FF",
+      "c2": "#4D7CFF",
+      "c3": "#F4FF5C",
+      "bg1": "#020A24",
+      "bg2": "#0A3478",
+      "text": "#F1FAFF"
+    },
+    "fluo": {
+      "label": "Vert fluo",
+      "c1": "#3DFF2B",
+      "c2": "#00F0C8",
+      "c3": "#FFE14D",
+      "bg1": "#03150C",
+      "bg2": "#0B4A33",
+      "text": "#F2FFF6"
+    },
+    "rose": {
+      "label": "Rose néon",
+      "c1": "#FF4FD8",
+      "c2": "#FF9F1C",
+      "c3": "#FFF36B",
+      "bg1": "#1C0221",
+      "bg2": "#5E0D5C",
+      "text": "#FFF3FD"
+    }
+  },
+  "fonts": {
+    "title": {
+      "Bungee": {
+        "spec": "Bungee",
+        "weight": 400
+      },
+      "Monoton": {
+        "spec": "Monoton",
+        "weight": 400
+      },
+      "Righteous": {
+        "spec": "Righteous",
+        "weight": 400
+      },
+      "Russo One": {
+        "spec": "Russo+One",
+        "weight": 400
+      },
+      "Orbitron": {
+        "spec": "Orbitron:wght@800",
+        "weight": 800
+      },
+      "Audiowide": {
+        "spec": "Audiowide",
+        "weight": 400
+      },
+      "Lilita One": {
+        "spec": "Lilita+One",
+        "weight": 400
+      },
+      "Passion One": {
+        "spec": "Passion+One:wght@700",
+        "weight": 700
+      }
+    },
+    "body": {
+      "Barlow": {
+        "spec": "Barlow:wght@400;500;600;700;800"
+      },
+      "Poppins": {
+        "spec": "Poppins:wght@400;500;600;700;800"
+      },
+      "Montserrat": {
+        "spec": "Montserrat:wght@400;500;600;700;800"
+      },
+      "Nunito": {
+        "spec": "Nunito:wght@400;600;700;800"
+      },
+      "Outfit": {
+        "spec": "Outfit:wght@400;500;600;700;800"
+      },
+      "Rubik": {
+        "spec": "Rubik:wght@400;500;600;700;800"
+      }
+    },
+    "wheel": "Barlow+Condensed:wght@600;700;800"
+  },
+  "project": {
+    "brand": {
+      "logo": "",
+      "tagline": ""
+    },
+    "theme": {
+      "preset": "nuit",
+      "c1": "#FF2E9A",
+      "c2": "#18E7FF",
+      "c3": "#FFD60A",
+      "bg1": "#0E0630",
+      "bg2": "#3B0A6B",
+      "text": "#FFF5FB",
+      "bg_mode": "gradient",
+      "bg_image": "",
+      "bg_overlay": 55,
+      "rays": true,
+      "sparkles": true,
+      "lights": true,
+      "font_title": "Bungee",
+      "font_body": "Barlow"
+    },
+    "texts": {
+      "title": "Tentez votre chance !",
+      "subtitle": "Scannez le QR code de votre ticket, faites tourner la roue et repartez peut-être avec un cadeau.",
+      "scan_btn": "Scanner mon QR code",
+      "manual_btn": "Saisir mon code",
+      "spin_btn": "Lancer la roue",
+      "locked_hint": "La roue se débloque dès que vous scannez votre ticket.",
+      "ready_hint": "Ticket {code} validé. À vous de jouer !",
+      "steps": [
+        {
+          "t": "Scannez",
+          "d": "Visez le QR code de votre ticket avec l’appareil photo de votre téléphone."
+        },
+        {
+          "t": "Tournez",
+          "d": "Lancez la roue. Chaque ticket donne droit à un seul tour."
+        },
+        {
+          "t": "Recevez",
+          "d": "Votre lot vous est remis par notre livreur sur présentation du bon."
+        }
+      ],
+      "prizes_title": "Les lots en jeu",
+      "jackpot_label": "Grand prix",
+      "lose_label": "Perdu",
+      "lose_sub": "À la prochaine fois",
+      "sold_out": "Épuisé",
+      "win_title": "Bravo !",
+      "win_text": "Vous avez gagné",
+      "jackpot_title": "Grand prix !",
+      "jackpot_text": "Incroyable, vous remportez le grand prix",
+      "lose_title": "Pas de chance…",
+      "lose_text": "Vous avez perdu, à la prochaine fois !",
+      "voucher_hint": "Présentez ce bon à votre livreur pour recevoir votre lot.",
+      "claim_title": "Où vous remettre votre lot ?",
+      "claim_privacy": "Vos coordonnées servent uniquement à la remise de votre lot.",
+      "claim_thanks": "C’est noté ! Nous vous contactons pour la remise de votre lot.",
+      "rules": "Jeu gratuit réservé aux clients ayant reçu un ticket.\nChaque ticket ne peut être joué qu’une seule fois, sur un seul de nos jeux.\nLes lots ne sont ni échangeables ni remboursables.\nLes lots sont remis par notre livreur sur présentation du bon de gain.",
+      "footer": ""
+    },
+    "options": {
+      "ask_details": true,
+      "require_phone": true,
+      "ask_address": true,
+      "show_prizes": true,
+      "show_values": false,
+      "show_steps": true,
+      "sound": true,
+      "confetti": true
+    },
+    "contact": {
+      "phone": "",
+      "whatsapp": "",
+      "instagram": "",
+      "facebook": "",
+      "website": ""
+    }
+  },
+  "global": {
+    "base_url": "",
+    "home": "portal",
+    "timezone": "Europe/Paris",
+    "portal": {
+      "title": "Roue de la chance",
+      "text": "Choisissez votre enseigne pour jouer avec votre ticket.",
+      "logo": ""
+    },
+    "ticket": {
+      "title": "Roue de la chance",
+      "subtitle": "Scannez ce code et tentez de gagner un cadeau",
+      "footer": "Ticket valable une seule fois. Jeu gratuit.",
+      "style": "neon",
+      "layout": "12",
+      "link": "portal",
+      "logo": "portal"
+    }
+  },
+  "seed": {
+    "codes": 12,
+    "products": [
+      {
+        "key": "cafe",
+        "name": "Café arabica",
+        "weight": "250 g",
+        "value": "",
+        "photo": "assets/img/samples/cafe.svg",
+        "stock": null
+      },
+      {
+        "key": "miel",
+        "name": "Miel de fleurs",
+        "weight": "500 g",
+        "value": "",
+        "photo": "assets/img/samples/miel.svg",
+        "stock": null
+      },
+      {
+        "key": "chocolat",
+        "name": "Chocolat noir 70 %",
+        "weight": "100 g",
+        "value": "",
+        "photo": "assets/img/samples/chocolat.svg",
+        "stock": null
+      },
+      {
+        "key": "the",
+        "name": "Thé vert à la menthe",
+        "weight": "200 g",
+        "value": "",
+        "photo": "assets/img/samples/the.svg",
+        "stock": null
+      },
+      {
+        "key": "amandes",
+        "name": "Amandes grillées",
+        "weight": "250 g",
+        "value": "",
+        "photo": "assets/img/samples/amandes.svg",
+        "stock": null
+      },
+      {
+        "key": "coffret",
+        "name": "Coffret prestige",
+        "weight": "1 kg",
+        "value": "",
+        "photo": "assets/img/samples/coffret.svg",
+        "stock": 3
+      }
+    ],
+    "wheel": [
+      {
+        "kind": "product",
+        "product": "cafe",
+        "chance": 12
+      },
+      {
+        "kind": "lose",
+        "chance": 18
+      },
+      {
+        "kind": "product",
+        "product": "chocolat",
+        "chance": 14
+      },
+      {
+        "kind": "product",
+        "product": "the",
+        "chance": 12
+      },
+      {
+        "kind": "jackpot",
+        "product": "coffret",
+        "chance": 4
+      },
+      {
+        "kind": "product",
+        "product": "miel",
+        "chance": 10
+      },
+      {
+        "kind": "lose",
+        "chance": 18
+      },
+      {
+        "kind": "product",
+        "product": "amandes",
+        "chance": 12
+      }
+    ],
+    "projects": [
+      {
+        "slug": "lucky-market",
+        "name": "Lucky Market",
+        "preset": "nuit",
+        "logo": "assets/img/samples/logo-lucky.svg",
+        "tagline": "Votre épicerie fine, livrée chez vous"
+      },
+      {
+        "slug": "golden-delices",
+        "name": "Golden Délices",
+        "preset": "casino",
+        "logo": "assets/img/samples/logo-golden.svg",
+        "tagline": "Saveurs d’exception"
+      },
+      {
+        "slug": "volt-store",
+        "name": "Volt Store",
+        "preset": "volt",
+        "logo": "assets/img/samples/logo-volt.svg",
+        "tagline": "Le shop qui fait des étincelles"
+      },
+      {
+        "slug": "fluo-epicerie",
+        "name": "Fluo Épicerie",
+        "preset": "fluo",
+        "logo": "assets/img/samples/logo-fluo.svg",
+        "tagline": "Bio, frais et local"
+      }
+    ]
+  }
+}

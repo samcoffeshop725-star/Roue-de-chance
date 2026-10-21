@@ -1,0 +1,51 @@
+/* Roue de la Chance — la roue (partagée par le jeu, l'administration et la démo) */
+.wheel { position: relative; width: 100%; aspect-ratio: 1; container-type: inline-size; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.wheel > svg, .wheel-rotor { position: absolute; inset: 0; width: 100%; height: 100%; }
+.wheel-frame { filter: drop-shadow(0 0 16px var(--w-c1)) drop-shadow(0 22px 40px rgba(0,0,0,.5)); }
+.wheel-neon { opacity: .95; }
+.wheel-rotor { will-change: transform; transform-origin: 50% 50%; }
+.wheel-rotor svg { width: 100%; height: 100%; display: block; }
+.wheel-pointer { overflow: visible; z-index: 3; pointer-events: none; filter: drop-shadow(0 5px 6px rgba(0,0,0,.45)) drop-shadow(0 0 10px var(--w-c1)); }
+.wheel-pointer-g { transform-box: view-box; transform-origin: 500px 44px; }
+.wheel-pointer-g.tick { animation: w-tick .13s ease-out; }
+@keyframes w-tick { 35% { transform: rotate(-13deg); } }
+.seg { transition: opacity .5s ease, filter .5s ease; }
+.wheel.is-win .seg:not(.is-hit), .wheel.is-jackpot .seg:not(.is-hit), .wheel.is-lose .seg:not(.is-hit) { opacity: .42; }
+.seg.is-hit { filter: brightness(1.18) saturate(1.1); }
+.seg-content { transition: opacity .5s ease; }
+.seg-content.is-soldout { opacity: .5; }
+
+.bulb { animation: w-chase 1.9s linear infinite; animation-delay: calc(var(--i) * -0.0679s); }
+.bulb-halo { opacity: .55; }
+@keyframes w-chase { 0%, 100% { opacity: .38; } 6% { opacity: 1; } 22% { opacity: .38; } }
+.wheel.is-spinning .bulb { animation-duration: .55s; animation-delay: calc(var(--i) * -0.0196s); }
+.wheel.is-win .bulb, .wheel.is-jackpot .bulb { animation: w-blink .5s steps(1, end) infinite; }
+.wheel.is-win .bulb.b1, .wheel.is-jackpot .bulb.b1 { animation-delay: -.25s; }
+@keyframes w-blink { 0% { opacity: 1; } 50% { opacity: .2; } }
+.wheel.is-lose .bulb { animation: none; opacity: .28; }
+.wheel.no-lights .bulb { animation: none; opacity: .7; }
+
+.wheel-hub { position: absolute; left: 50%; top: 50%; z-index: 4; width: 21.5%; aspect-ratio: 1; padding: 0; transform: translate(-50%, -50%);
+  border-radius: 50%; border: 0; display: grid; place-items: center; color: #2A1600;
+  background: radial-gradient(circle at 34% 28%, #FFF6CF 0%, var(--w-c3, #FFD60A) 34%, #B07800 100%);
+  box-shadow: 0 0 0 0.9cqw rgba(255,255,255,.9), 0 1.4cqw 3.4cqw rgba(0,0,0,.5), 0 0 4cqw var(--w-c3, #FFD60A);
+  font-family: var(--font-title); font-weight: var(--title-weight, 400); transition: transform .15s ease; }
+.wheel-hub:hover:not(:disabled) { transform: translate(-50%, -50%) scale(1.04); }
+.wheel-hub:active:not(:disabled) { transform: translate(-50%, -50%) scale(.97); }
+.wheel-hub .hub-ico { width: 42%; height: 42%; stroke-width: 2.2; }
+.wheel-hub .hub-txt { font-size: 4.4cqw; letter-spacing: .03em; line-height: 1; text-transform: uppercase; }
+.wheel.is-ready .wheel-hub { animation: w-hub 1.2s ease-in-out infinite; }
+@keyframes w-hub { 50% { box-shadow: 0 0 0 0.9cqw #fff, 0 1.4cqw 3.4cqw rgba(0,0,0,.5), 0 0 9cqw var(--w-c1, #FF2E9A); } }
+.hub-dots { display: flex; gap: 6%; width: 50%; justify-content: center; }
+.hub-dots i { width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: currentColor; animation: w-dot .9s ease-in-out infinite; }
+.hub-dots i:nth-child(2) { animation-delay: .15s; } .hub-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes w-dot { 50% { transform: translateY(-60%); opacity: .5; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel.is-ready .wheel-hub { animation: none; }
+  .bulb, .wheel.is-spinning .bulb { animation: none; opacity: .85; }
+}
+/* Anciens navigateurs sans aspect-ratio : la roue garde sa forme carrée */
+@supports not (aspect-ratio: 1) {
+  .wheel::before { content: ''; display: block; padding-top: 100%; }
+}
